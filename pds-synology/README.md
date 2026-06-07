@@ -61,16 +61,13 @@ ssh your-username@your-nas-ip
 Then create the folder structure:
 
 ```bash
-sudo mkdir -p /volume1/docker/bluesky-pds
-sudo mkdir -p /volume1/docker/bluesky-pds/pds-data
-sudo mkdir -p /volume1/docker/bluesky-pds/caddy/data
-sudo mkdir -p /volume1/docker/bluesky-pds/caddy/etc/caddy
+sudo mkdir -p /volume1/docker/bluesky-pds/{pds-data,caddy/{data/caddy,etc/caddy}}
 ```
 
-Give yourself permission to work in there (replace `your-username` with your real DSM username):
+Give yourself permission to work in there:
 
 ```bash
-sudo chown -R your-username:users /volume1/docker/bluesky-pds
+sudo chown -R $USER:users /volume1/docker/bluesky-pds
 ```
 
 ### Step 4: Generate Caddy Instance UUID
